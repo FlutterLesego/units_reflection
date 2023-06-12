@@ -28,10 +28,15 @@ class UnitView extends StatelessWidget {
                     style: appTextStyle(20, Colors.black, FontWeight.bold),
                   ),
                   SizedBoxH10(),
+                  Divider(
+                    height: 2.0,
+                    color: Colors.orange,
+                  ),
+                  SizedBoxH10(),
                   Text(
                     selectedUnit.reflecions,
                     style: appTextStyle(
-                        20, Colors.black.withOpacity(0.7), FontWeight.w300),
+                        20, Colors.black.withOpacity(0.7), FontWeight.w400),
                   )
                 ],
               ),

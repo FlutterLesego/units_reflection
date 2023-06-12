@@ -3,9 +3,11 @@ import 'package:backendless_todo_starter/models/unit_entry.dart';
 import 'package:flutter/material.dart';
 
 class UserService with ChangeNotifier {
+  //initialize backendless user
   BackendlessUser? _currentUser;
   BackendlessUser? get currentUser => _currentUser;
 
+  //set current user to null
   void setCurrentUserToNull() {
     _currentUser = null;
   }

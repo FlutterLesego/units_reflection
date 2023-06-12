@@ -5,7 +5,6 @@ import 'package:backendless_todo_starter/routes/routes.dart';
 import 'package:backendless_todo_starter/services/helper_unit.dart';
 import 'package:backendless_todo_starter/services/helper_user.dart';
 import 'package:backendless_todo_starter/services/unit_service.dart';
-import 'package:backendless_todo_starter/services/unitprovider.dart';
 import 'package:backendless_todo_starter/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -102,7 +101,7 @@ class _AllUnitsPageState extends State<AllUnitsPage> {
                           selector: (context, value) => value.currentUser,
                           builder: (context, value, child) {
                             return Text(
-                              'Welcome, ${value!.getProperty('name')}!',
+                              'Welcome, ${value?.getProperty('name')}!',
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                 fontSize: 32,
@@ -189,15 +188,10 @@ class _AllUnitsPageState extends State<AllUnitsPage> {
                     Tuple2(value.busyRetrieving, value.busySaving),
                 builder: (context, value, child) {
                   return value.item1
-                      ? AppProgressIndicator(
-                          color: Colors.deepOrange,
-                          text:
-                              'Busy retrieving data from the database...please wait...')
+                      ? AppProgressIndicator(color: Colors.deepOrange, text: '')
                       : value.item2
                           ? AppProgressIndicator(
-                              color: Colors.deepOrange,
-                              text:
-                                  'Busy saving data to the database...please wait...')
+                              color: Colors.deepOrange, text: '')
                           : Container();
                 },
               ),

@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:backendless_sdk/backendless_sdk.dart';
 import 'package:backendless_todo_starter/models/unit.dart';
 import 'package:backendless_todo_starter/models/unit_entry.dart';
+import 'package:backendless_todo_starter/services/unitprovider.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import '../lifecycle.dart';
-import 'unitprovider.dart';
 
 class UnitService with ChangeNotifier {
   UnitService() {
@@ -36,21 +36,6 @@ class UnitService with ChangeNotifier {
 //provider for units from json data online
   Map<String, dynamic> unitsMap = {};
 
-  Future<void> get fetchUnits async {
-    final response = await get(Uri.parse(
-        'https://dl.dropboxusercontent.com/s/q6chvs5eqktd1nb/unitReflections.json?dl=0'));
-
-    if (response.statusCode == 200) {
-      try {
-        unitsMap = jsonDecode(response.body);
-      } catch (e) {
-        throw Exception(e.toString());
-      }
-    } else {
-      throw Exception('Error: Please check internet connection.');
-    }
-  }
-
   //get the units from the backend
   Future<String> getUnits(String username) async {
     String result = 'OK';
@@ -78,17 +63,11 @@ class UnitService with ChangeNotifier {
     if (map != null) {
       if (map.length > 0) {
         _unitEntry = UnitEntry.fromJson(map.first);
-        _units = await UnitProvider.fetchUnits()
-            .then((value) => convertMapToUnitList(_unitEntry!.units));
+        _units = convertMapToUnitList(_unitEntry!.units);
         notifyListeners();
       } else {
-        try {
-          _units = await UnitProvider.fetchUnits();
-          notifyListeners();
-        } catch (e) {
-          result = e.toString();
-          notifyListeners();
-        }
+        // Retrieve units from JSON file
+        _units = await UnitProvider.fetchUnits();
       }
     } else {
       result = 'NOT OK';
