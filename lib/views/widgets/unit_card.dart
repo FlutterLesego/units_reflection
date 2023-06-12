@@ -1,7 +1,7 @@
-import 'package:backendless_todo_starter/misc/constants.dart';
-import 'package:backendless_todo_starter/models/unit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import '../../misc/constants.dart';
+import '../../models/unit.dart';
 
 class UnitCard extends StatelessWidget {
   const UnitCard(

@@ -1,8 +1,8 @@
-import 'package:backendless_todo_starter/services/unit_service.dart';
-import 'package:backendless_todo_starter/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'services/unit_service.dart';
+import 'services/user_service.dart';
 
 class LifeCycle extends StatefulWidget {
   const LifeCycle({Key? key, required this.child}) : super(key: key);

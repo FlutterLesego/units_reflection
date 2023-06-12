@@ -1,4 +1,4 @@
-name: backendless_todo_starter
+name: units_reflections
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -32,10 +32,9 @@ dependencies:
   flutter_slidable: ^3.0.0
   backendless_sdk: ^7.3.5
   tuple: ^2.0.1
-  shared_preferences: ^2.1.1
   google_fonts: ^4.0.4
+  shared_preferences: ^2.1.1
   http: ^0.13.6
-  image_picker: ^0.8.7+5
 dev_dependencies:
   flutter_test:
     sdk: flutter

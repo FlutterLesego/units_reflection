@@ -1,10 +1,10 @@
-import 'package:backendless_todo_starter/routes/routes.dart';
-import 'package:backendless_todo_starter/services/unit_service.dart';
-import 'package:backendless_todo_starter/services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'lifecycle.dart';
+import 'routes/routes.dart';
+import 'services/unit_service.dart';
+import 'services/user_service.dart';
 
 void main() {
   runApp(const MyApp());

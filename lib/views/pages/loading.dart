@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:backendless_todo_starter/init.dart';
 import 'package:flutter/material.dart';
+import '../../init.dart';
 import '../widgets/app_progress_indicator.dart';
 
 class Loading extends StatefulWidget {

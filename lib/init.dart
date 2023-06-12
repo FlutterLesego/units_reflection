@@ -1,11 +1,11 @@
 import 'package:backendless_sdk/backendless_sdk.dart';
-import 'package:backendless_todo_starter/routes/routes.dart';
-import 'package:backendless_todo_starter/services/unit_service.dart';
-import 'package:backendless_todo_starter/services/user_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
 import 'misc/constants.dart';
+import 'routes/routes.dart';
+import 'services/unit_service.dart';
+import 'services/user_service.dart';
 
 class InitApp {
   static void initializeApp(BuildContext context) async {

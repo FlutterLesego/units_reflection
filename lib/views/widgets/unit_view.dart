@@ -1,8 +1,8 @@
-import 'package:backendless_todo_starter/misc/constants.dart';
-import 'package:backendless_todo_starter/models/unit.dart';
-import 'package:backendless_todo_starter/services/unit_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../misc/constants.dart';
+import '../../models/unit.dart';
+import '../../services/unit_service.dart';
 
 class UnitView extends StatelessWidget {
   const UnitView({Key? key}) : super(key: key);

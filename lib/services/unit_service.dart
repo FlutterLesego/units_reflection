@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:backendless_sdk/backendless_sdk.dart';
-import 'package:backendless_todo_starter/models/unit.dart';
-import 'package:backendless_todo_starter/models/unit_entry.dart';
-import 'package:backendless_todo_starter/services/unitprovider.dart';
+import '../models/unit.dart';
+import '../models/unit_entry.dart';
+import '../services/unitprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../lifecycle.dart';

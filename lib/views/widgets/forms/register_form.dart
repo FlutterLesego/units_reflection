@@ -1,8 +1,8 @@
-import 'package:backendless_todo_starter/misc/validators.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../misc/constants.dart';
+import '../../../misc/validators.dart';
 import '../../../services/helper_user.dart';
 import '../../../services/user_service.dart';
 import '../app_textfield.dart';

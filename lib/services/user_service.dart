@@ -1,5 +1,5 @@
 import 'package:backendless_sdk/backendless_sdk.dart';
-import 'package:backendless_todo_starter/models/unit_entry.dart';
+import '../models/unit_entry.dart';
 import 'package:flutter/material.dart';
 
 class UserService with ChangeNotifier {
